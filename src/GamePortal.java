@@ -6,7 +6,7 @@ import java.util.Scanner;
 import Game.Game;
 import ScrollArt.ScrollArtCloud;
 import Game.ErrorCheck;
-import Store.StoreGame;
+import BuzzFeedCopy.Answer;
 
 public class GamePortal {
     static Scanner sc = new Scanner(System.in);
