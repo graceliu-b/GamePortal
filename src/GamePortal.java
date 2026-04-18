@@ -1,15 +1,18 @@
-import java.io.File;
+//import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 import java.util.Scanner;
 
 import Game.Game;
-import ScrollArt.ScrollArtGame;
+import Game.ErrorCheck;
+import NumberGuessGame.NumberGame;
+import BuzzFeedCopy.BuzzFeedCopy;
+import ScrollArt.ScrollArt;
 
 
 public class GamePortal {
     static Scanner sc = new Scanner(System.in);
-    static ArrayList<Game> games = new ArrayList<Game>();
+    static ArrayList<Game> games = new ArrayList<>();
     public static void main(String[] args) {
         HashMap<String, Integer> gameCounts = new HashMap<String, Integer>();
         // writes highscores
@@ -36,7 +39,7 @@ public class GamePortal {
 
     public static void loadGames() {
         games.clear();
-        games.add(new JeopardyTalambuhayGame());
+        games.add(new NumberGuessGame());
         games.add(new BuzzFeedCopy());
         games.add(new ScrollArt());
     }

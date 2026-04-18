@@ -1,15 +1,18 @@
+package NumberGuessGame;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Game {
+import Game.GameWriteable;
+
+public class NumberGame extends Game implements GameWriteable  {
     int guesses;
     int numToGuess;
     static Scanner sc = new Scanner(System.in);
     ArrayList<Integer> previousGuesses = new ArrayList<>();
     int[]prevGuesses;
 
-    Game(int low, int high) {
+    NumberGame(int low, int high) {
         low = 0;
         high = 50;
         guesses = 0;
@@ -58,5 +61,18 @@ public class Game {
         return guesses;
     }
 
+@Override
+public String getScore(){
+    return Integer.toString(guesses);
+}
+@Override
+public boolean isHighScore(string score, String currentHighScore){
+    if (currentHighScore == null) return true;
+    return Integer.parseInt(score)<Integer.praseInt(currentHighScore);
+}
+@Override
+public String getGameName(){
+    return "NumberGuess";
+}
 }
 
