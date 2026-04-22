@@ -3,16 +3,17 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import Game.Game;
 import Game.GameWriteable;
 
-public class NumberGame extends Game implements GameWriteable  {
+public class NumberGame implements Game, GameWriteable  {
     int guesses;
     int numToGuess;
     static Scanner sc = new Scanner(System.in);
     ArrayList<Integer> previousGuesses = new ArrayList<>();
     int[]prevGuesses;
 
-    NumberGame(int low, int high) {
+    public NumberGame() {
         low = 0;
         high = 50;
         guesses = 0;
@@ -22,7 +23,7 @@ public class NumberGame extends Game implements GameWriteable  {
 
     }
 
-    void play() {
+    public void play() {
         System.out.println("begin play!");
         int guess = getGuess();
        
@@ -66,9 +67,9 @@ public String getScore(){
     return Integer.toString(guesses);
 }
 @Override
-public boolean isHighScore(string score, String currentHighScore){
+public boolean isHighScore(String score, String currentHighScore){
     if (currentHighScore == null) return true;
-    return Integer.parseInt(score)<Integer.praseInt(currentHighScore);
+    return Integer.parseInt(score)<Integer.parseInt(currentHighScore);
 }
 @Override
 public String getGameName(){

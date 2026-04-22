@@ -1,12 +1,12 @@
-//import java.io.File;
+import java.io.File;
 import java.util.ArrayList;
-//import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Scanner;
 
+import BuzzFeedCopy.BuzzFeedCopy;
 import Game.Game;
 import Game.ErrorCheck;
 import NumberGuessGame.NumberGame;
-import BuzzFeedCopy.BuzzFeedCopy;
 import ScrollArt.ScrollArt;
 
 
@@ -39,7 +39,7 @@ public class GamePortal {
 
     public static void loadGames() {
         games.clear();
-        games.add(new NumberGuessGame());
+        games.add(new NumberGame());
         games.add(new BuzzFeedCopy());
         games.add(new ScrollArt());
     }
