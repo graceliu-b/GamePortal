@@ -2,28 +2,24 @@ package NumberGuessGame;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-
-import Game.Game;
 import Game.GameWriteable;
 
-public class NumberGame implements Game, GameWriteable  {
+public class NumberGame implements GameWriteable  {
     int guesses;
     int numToGuess;
     static Scanner sc = new Scanner(System.in);
     ArrayList<Integer> previousGuesses = new ArrayList<>();
     int[]prevGuesses;
-
-    public NumberGame() {
-        low = 0;
-        high = 50;
+    
+    public void play() {
+         int low = 0;
+        int high = 50;
         guesses = 0;
-        System.out.println("I'm thinking of a number " + low + " to " + high);
+
         Random r = new Random();
         numToGuess = r.nextInt(low,high);
 
-    }
-
-    public void play() {
+        System.out.println("I'm thinking of a number " + low + " to " + high);
         System.out.println("begin play!");
         int guess = getGuess();
        
